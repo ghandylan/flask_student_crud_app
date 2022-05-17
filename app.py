@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, flash, redirect
+from flask import Flask, flash, redirect, render_template, request, url_for
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.dialects.mysql import *
 
@@ -63,12 +63,12 @@ def delete(id):
     my_data = Data.query.get(id)
     db.session.delete(my_data)
     db.session.commit()
-    flash("Employee Deleted Successfully")
+    flash("Student Deleted Successfully")
 
     return redirect(url_for('index'))
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
     app.run()
     db.create_all()
