@@ -5,7 +5,7 @@ from sqlalchemy.dialects.mysql import *
 app = Flask(__name__)
 app.secret_key = "hotdogs"
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://ghandylan:hotdog123@localhost/FlaskApp'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/FlaskApp'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -69,6 +69,6 @@ def delete(id):
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
     app.run()
     db.create_all()
