@@ -5,7 +5,7 @@ from sqlalchemy.dialects.mysql import *
 app = Flask(__name__)
 app.secret_key = "hotdogs"
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/FlaskApp'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/flask_student_crud'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
